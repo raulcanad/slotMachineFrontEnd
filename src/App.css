@@ -1,6 +1,15 @@
-.App {
-  text-align: center;
+.fondo{
+ 
+  background-image: url('./resources/flor.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;	
 }
+#boton:hover{
+  animation: App-logo-spin infinite 20s linear;
+  filter: saturate(8);
+}
+
 
 .App-logo {
   height: 40vmin;

@@ -1,43 +1,46 @@
-import react, { useState } from 'react';
+import * as React from 'react';
+import react, { Fragment, useState } from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import '../App.css';
+
 import { Container } from '@mui/system';
 import mapResult from '../helper/ResultMapper';
 
+//import {Button} from  "./Boton";
+
 const Game : React.FC = () => {
   const [gameResult, setGameResult] = useState(['joker','joker','joker'])
-
-      return (
-        <Container sx={{display:'flex',justifyContent:'space-between'}}>
-            <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-                component="img"
-                height="140"
-                image= {mapResult(gameResult[0])}
-                alt="green iguana"
-            />
-            </Card>
-            <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-            component="img"
-            height="140"
-            image={mapResult(gameResult[1])}
-            alt="green iguana"
-            />
-        </Card>
-        <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-                component="img"
-                height="140"
-                image={mapResult(gameResult[2])}
-                alt="green iguana"
-            />
-            </Card>
-        </Container>
+  const [newTask, setNewTask] =useState('');
+  
+      return (  
+          
+            <Container  sx={{ display: 'flex', justifyContent: 'space-between',width:'60%', marginBottom:'10%'}}>
+              
+              <Card sx={{ maxWidth: 345, background:'#40CFFF' }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={mapResult(gameResult[0])}
+                  alt="primer slot" />
+              </Card>
+              <Card sx={{ maxWidth: 345,background:'#40CFFF' }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={mapResult(gameResult[1])}
+                  alt="segundo slot" />
+              </Card>
+              <Card sx={{ maxWidth: 345, background:'#40CFFF' }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={mapResult(gameResult[2])}
+                  alt="tercer slot" />
+              </Card>
+            </Container>            
+        
       );
     
     
@@ -47,4 +50,7 @@ const Game : React.FC = () => {
 
 
 export default Game;
+
+
+
 
