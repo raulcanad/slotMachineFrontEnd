@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 
-const Formulario = () => {
+const Formulario2 = () => {
 
 
     const [datos, setDatos] = useState({
@@ -24,13 +24,25 @@ const Formulario = () => {
 
     return (
         <Fragment>
-            <h1>Tus Datos</h1>
+            <h2>Tus Datos</h2>
             <form className="row" onSubmit={enviarDatos}>
                 <div className="col-md-3">
-                    <input type="text" placeholder="Nombre" className="form-control" onChange={handleInputChange} name="nombre"></input>
+                    <input type="text" placeholder="Name" className="form-control" onChange={handleInputChange} name="name"></input>
                 </div>
                 <div className="col-md-3">
-                    <input type="text" placeholder="Apellido" className="form-control" onChange={handleInputChange} name="apellido"></input>
+                    <input type="text" placeholder="LastName" className="form-control" onChange={handleInputChange} name="last_name"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="IdCard" className="form-control" onChange={handleInputChange} name="dni"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="Birthday" className="form-control" onChange={handleInputChange} name="birthday"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="Email" className="form-control" onChange={handleInputChange} name="email"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="Phone" className="form-control" onChange={handleInputChange} name="phone"></input>
                 </div>
                 <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
@@ -39,4 +51,4 @@ const Formulario = () => {
     );
 }
  
-export default Formulario;
+export default Formulario2;
