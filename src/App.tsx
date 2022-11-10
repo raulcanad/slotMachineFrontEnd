@@ -14,7 +14,7 @@ import apiFetch from './api/fetch';
 
 function App() {
   const [gameResult, setGameResult] = useState(['joker', 'joker', 'joker'])
-  const botonProps = { funcionClick: () => apiFetch('POST', '/game/gameRoll', { username: "Pepi" }).then(result => setGameResult(result)) }
+  const botonProps = { funcionClick: () => apiFetch('POST', '/').then(result => setGameResult(result)) }
   return (
     <>
       <Container className="fondo">

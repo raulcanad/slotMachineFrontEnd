@@ -1,23 +1,21 @@
 import { ThemeContext } from "@emotion/react";
 
-const BASE = 'http://localhost/Proyecto2022/index.php';
+const BASE = 'http://localhost:8080';
 
 const apiFetch = ( metodo: string, ruta: string, body = {}) => {
    
         return fetch(BASE + ruta,
             {
-                body: JSON.stringify(body),
+                method: "POST",
                 headers: {
-                    method: 'POST',
-                    "Content-Type": 'form-data'
-                }
-
-
+                     "Content-Type": "application/json"
+                },
+                body: JSON.stringify({'username':'Pepi','password':'12345'})
             })
             .then(response => { return response.json() })
             .then(json => { return json })
-            .catch(function (error) { console.log(error) })
     }
 
-
+    
 export default apiFetch;
+ 
